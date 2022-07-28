@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Coin info</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap1.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script&amp;display=swap">
+    <link rel="stylesheet" href="/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="/css/Login-Form-Basic.css">
+    <link rel="stylesheet" href="/css/Pricing-Yearly--Monthly.css">
+    <link rel="stylesheet" href="/css/untitled.css">
+</head>
+
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="54" style="--bs-body-color: #f8fafc;">
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="#page-top">Coininfo</a>
+            <button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto text-uppercase">
+                    <li class="nav-item"><a class="nav-link active" href="#login">LOGIN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/signup">SIGNUP</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="masthead" style="background-image: url('/img/wepik--202256-135123.png');filter: brightness(92%);color: #0f051e;height: 853px;">
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in" style="width: 910px;"><span data-bss-hover-animate="tada" style="color: var(--bs-gray-200);margin-right: 0px;margin-left: 0px;">Visit your coin</span></div>
+                <div class="intro-heading text-uppercase" style="margin-bottom: 141px;"><span data-bss-hover-animate="bounce" style="color: var(--bs-gray-200);width: 0px;">I'ts time to trade&nbsp;&nbsp;</span></div>
+            </div>
+        </div>
+    </header>
+    <section style="background: linear-gradient(#0c2a45 0%, #4c6b88 50%, #0c2a45 100%);">
+        <section id="login">
+            <div class="container">
+                <section class="position-relative py-4 py-xl-5">
+                    <div class="container">
+                        <div class="row mb-5">
+                            <div class="col-md-8 col-xl-6 text-center mx-auto">
+                                <h2 style="color: var(--bs-white);">Log in</h2>
+                            </div>
+                        </div>
+                        <div class="row d-flex justify-content-center">
+                            <%- include("partials/messages")-%>
+                            <div class="col-md-6 col-xl-4">
+                                <div class="card mb-5">
+                                    <div class="card-body d-flex flex-column align-items-center">
+                                        <div class="bs-icon-xl bs-icon-circle bs-icon-primary bs-icon my-4"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-person">
+                                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"></path>
+                                            </svg></div>
+                                        <form class="text-center" method="post">
+                                            <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Email"></div>
+                                            <div class="mb-3"><input class="form-control" type="password" name="password" placeholder="Password"></div>
+                                            <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit">Login</button></div>
+                                            <label class="form-check-label" for="form2Example3">
+                                                I dont have account! <a href="/signup">Register</a>
+                                            </label>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="text-uppercase" style="font-family: 'Kaushan Script', serif;">crypto story</h1>
+                        <h3 class="text-muted section-subheading"></h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="list-group timeline">
+                            <li class="list-group-item">
+                                <div class="timeline-image"><img class="rounded-circle img-fluid" src="/img/about/téléchargement.png"></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4>Bitcoin</h4>
+                                        <h4 class="subheading">2009</h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p class="text-start text-muted">Founded in 2009, Bitcoin was the first cryptocurrency and remains the most traded. The currency was developed by Satoshi Nakamoto, believed to be the pseudonym of a person or group of people whose precise identity remains unknown.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item timeline-inverted">
+                                <div class="timeline-image"><img class="rounded-circle img-fluid" src="/img/about/téléchargement%20(3).png"></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4><strong>Ripple</strong></h4>
+                                        <h4 class="subheading">2011</h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p class="text-muted">Ripple is a distributed ledger system that was founded in 2012. Ripple can be used to track different types of transactions, not just cryptocurrencies. The company behind it has worked with various banks and financial institutions.<br></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="timeline-image"><img class="rounded-circle img-fluid" src="/img/about/téléchargement%20(2).png"></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4><strong>Litecoin</strong><br></h4>
+                                        <h4 class="subheading">2011</h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p class="text-muted text-start"><br>This currency most closely resembles Bitcoin, but has evolved faster to develop innovations including faster payments as well as processes for more transactions.<br><br></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item timeline-inverted">
+                                <div class="timeline-image"><img class="rounded-circle img-fluid" src="/img/about/téléchargement%20(1).png"></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4><strong>Etherium</strong></h4>
+                                        <h4 class="subheading">2015</h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p class="text-muted">&nbsp;Developed in 2015, Ethereum is a blockchain platform with its own cryptocurrency, called Ether (ETH) or Ethereum. It is the most popular cryptocurrency after Bitcoin.<br><br></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item timeline-inverted">
+                                <div class="timeline-image">
+                                    <h4>Be Part<br>&nbsp;Of coin<br>&nbsp;Story!</h4>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="d-none py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3"><a href="#"><img class="img-fluid d-block mx-auto" src="/img/clients/creative-market.jpg"></a></div>
+                    <div class="col-sm-6 col-md-3"><a href="#"><img class="img-fluid d-block mx-auto" src="/img/clients/designmodo.jpg"></a></div>
+                    <div class="col-sm-6 col-md-3"><a href="#"><img class="img-fluid d-block mx-auto" src="/img/clients/envato.jpg"></a></div>
+                    <div class="col-sm-6 col-md-3"><a href="#"><img class="img-fluid d-block mx-auto" src="/img/clients/themeforest.jpg"></a></div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4"><span class="copyright">Copyright&nbsp;© coininfo 3SI 2022</span></div>
+                    <div class="col-md-4">
+                        <ul class="list-inline social-buttons">
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="list-inline quicklinks">
+                            <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                            <li class="list-inline-item"><a href="#">Terms of Use</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+   
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/js/bs-init.js"></script>
+    <script src="/js/agency.js"></script>
+</body>
+
+</html>

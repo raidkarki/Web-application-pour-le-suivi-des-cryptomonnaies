@@ -1,0 +1,127 @@
+<%- include("partials/header")-%>
+<div class="container-fluid" style="background: linear-gradient(rgb(34, 37, 49) 100%, rgba(83, 88, 110, 0) 413px);
+">
+ <div class="trend"> 
+  <div class="trendingphrase">New Cryptocurrencies </div>
+<div class="trendingparagraph">New cryptocurrencies added to Market in the last 30 days.</div>
+
+ </div>
+ <div class="allbuttons">
+    <div class="wat.por.div" ><a href="#" style="margin-right: 0px;"><button
+          class="btn btn-primary buttons" type="button"><span><i class="far fa-star"
+              style="color: var(--bs-gray-500);"></i></span>
+              <span
+            style="margin-left: 3px;">Watchlist</span></button></a><a href="#" style="margin-right: 0px;"><button
+          class="btn btn-primary buttons" type="button"><span><i class="fas fa-chart-pie"
+              style="color: var(--bs-gray-500);"></i></span><span
+            style="margin-left: 5px;">Portfolio</span></button></a>
+      <div class="line" style="margin-top: 9px;margin-right: 11px;margin-left: 5px;"></div>
+    </div>
+    <a href="/dash/trending-cryptocurrencies">
+        <button class="btn btn-primary buttons1" type="button">Tranding</button>
+    </a>
+    <a href="/dash/most-visited">
+        <button  class="btn  btn-primary buttons1" type="button">most visited</button>
+      </a>
+      <a href="/dash/gains&losers">
+        <button class="btn btn-primary buttons1" type="button">gainers&losers</button>
+      </a>
+        <a href="/dash/new">
+            <button class="btn active btn-primary buttons1" type="button">Recently Added</button>
+          </a>
+  </div>
+  <div>
+
+
+
+</div>
+<div>
+    <div class="table-responsive" >
+      <table class="table czTsgW  table-hover">
+        <thead style="border-top-style: solid;border-top-color: #363b43;border-right-style: none;border-bottom-style: solid;border-bottom-color: #363b43;border-left-style: none;color: #ffffff;font-style: normal;font-weight: 500;height: 50px;">
+          
+          <tr>
+            <th scope="col" ></th>
+            <th scope="col" ><i class="fas fa-hashtag"></i><i class="fas fa-caret-down"></i></th>
+            <th scope="col" style="text-align:left">Name</th>
+            <th scope="col" >Price</th>
+            <th  scope="col" style="text-align:right">1h</th>
+            <th scope="col" style="text-align:right">24h</th>
+            <th scope="col" style="text-align:right">Fully diluted Market cap</th>
+            <th scope="col" style="text-align:right">Volume</th>
+            <th scope="col" style="text-align:right">blockchain</th>
+            <th scope="col" style="text-align:right">Added</th>
+            
+          </tr>
+        </thead>
+        
+        <tbody>
+          <% for (var i = 0; i <30; i++) { %> 
+          <tr>
+               <th scope="row"></th>
+              <td style="text-align: left;"><p class="rankoftable"><%= coin1[i].rank %></p></td>
+              <td style="text-align: left;">
+                <div display="flex" class=" escjiH">
+                <a href="/coin/<%= coin1[i].name %>" class="cmc-link">
+                  <div class=" coincar">
+                    <img class="coin-logo" src="<%= coin1[i].imgsrc %>" loading="lazy" alt="BTC logo">
+                    <div class=" namecoin">
+                      <p font-weight="semibold" color="text" font-size="1" class="name"><%= coin1[i].name %></p>
+                      <div data-nosnippet="true" class="fZIJcI">
+                        <div class=" iNybpU"><%= coin1[i].rank %></div>
+                        <p color="text3" class="sc-1eb5slv-0 nhjPq coin-item-symbol" font-size="1"><%= coin1[i].sym %></p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              
+            </div>
+              </td>
+              <td style="text-align: center;" >
+                <div class=" cLgOOr">
+                  <a href="/coin/<%= coin1[i].name %>" class="cmc-link">
+                    <span><%= coin1[i].price %></span>
+                  </a>
+                </div>
+              </td>
+              <td style="text-align: right ;">
+               <a href="/coin/<%= coin1[i].name %>"><span class=" kAXKAX"><span class="fas fa-caret-up"></span><%= coin1[i].h %></span></a> 
+              </td>
+              <td style="text-align: right ;">
+                <span class="hzgCfk"><span class="fas fa-caret-down"></span><%= coin1[i].d %></span>
+              </td>
+              <td style="text-align: right ;">
+                <div class=" cLgOOr">
+                  <a href="/coin/<%= coin1[i].name %>" class="cmc-link">
+                    <span><%= coin1[i].fully %></span>
+                  </a>
+                </div>
+              </td>
+              <td style="text-align: right ;">
+                <div class="sc-16r8icm-0 j3nwcd-0 cRcnjD">
+                  <a href="/currencies/bitcoin/markets/" class="cmc-link">
+                    <p font-size="1" class="sc-1eb5slv-0 bRswdu font_weight_500" color="text"><%= coin1[i].volume %></p>
+                  </a>
+                  
+                </div>
+              </td>
+              <td style="text-align: right ;">
+                <div class="s8fs2i-3 kkbHba">
+                  <img src="<%= coin1[i].bimg %>">
+                  <%= coin1[i].blockchain %></div>
+                  
+              </td>
+              <td style="text-align: right ;">
+                <div class=" cLgOOr">
+                  <a href="/coin/<%= coin1[i].name %>" class="cmc-link">
+                    <span><%= coin1[i].Added %></span>
+                  </a>
+                </div>
+              </td>
+          </tr>
+          <% } %>
+          
+      </tbody>
+      </table>
+    </div>
+<%- include("partials/footer")-%>

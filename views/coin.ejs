@@ -1,0 +1,241 @@
+<%- include("partials/header")-%>
+
+
+  <div class="shadow-lg currencypage">
+    <div class="container-fluid">
+      <div class="linksdiv" display="none,initial">
+        <div class="linksp" display="flex">
+          <a class="links" href="/">cryptocurrencies<i
+              class="la la-angle-right"></i></a>
+              <a class="links" href="/dash">coins<i
+              class="la la-angle-right"></i></a>
+              <a style="color: rgb(233, 231, 231) ;" class="links" href=""> <%= info.name %></a>
+        </div>
+      </div>
+      <div class="top-summary">
+        <div class="top-summary-container">
+          <div class="namesection">
+            <div class="nameheader"><img style="height: 32px;width: 32px;" src=" <%= info.logo %>">
+              <h1 class="fs-2 h1" color="text"> <%= info.name %> <small class="text-uppercase namesymbol"> <%= info.symbol %></small></h1>
+              <span><a
+                  class="link-secondary btn far fa-star watchsicon" href="#"
+                  style="width: auto;padding: 0px 8px;"></a></span>
+            </div>
+            <div class="namesectionlinks">
+              <div class="namepil namepilprimary"><span>rank #<%= info2.cmc_rank %></span></div>
+              <div class="namepil"><span> <%= info.category %></span></div>
+              <% if(info.platform!=null){ %>
+              <div class="namepil"><span><%= info.platform.token_address %></span></div>
+              <% }%>
+              
+            </div>
+          </div>
+          <div class="pricesection">
+            <h1 class="priceheading"> <%= info.slug %><small class="text-uppercase">( <%= info.symbol %>)</small></h1>
+            <div class="pricetitle">
+              <div class="pricevalue"><span>$<%= info2.price %></span></div><span class="priceper <%= info2.class2 %>">
+                <span class="<%= info2.class1 %>"
+                  style="padding-right: 4px;"></span><%= info2.percent_change_24h %>%</span>
+            </div>
+            <div class="alternateprices">
+              <p class="text-uppercase">14.11ETH<span class="alternatepricesper">1.14%</span></p>
+            </div>
+          </div>
+          <div class="statesection">
+            <div class="hide statecontainer">
+              <div class="stateblock">
+                <div class="stateblockinner">
+                  <div class="statelabel"><label class="form-label">marketCap</label>
+                    <div class="infoicon"><i class="fa fa-info-circle"></i></div>
+                  </div>
+                  <div class="stateitemright">
+                    <div class="statevalue"><span>$<%=info2.market_cap %></span></div><span
+                      style="color: #ea3943;padding: 0;border-radius: 8px;display: block;margin-top: 0;font-size: 12px;font-weight: 600;"><i
+                        class="fa fa-caret-up" style="padding-right: 4px;"></i>3.18%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="stateblock">
+                <div class="stateblockinner">
+                  <div class="statelabel"><label class="form-label">Fully diluted Market Cap</label>
+                    <div class="infoicon"><i class="fa fa-info-circle"></i></div>
+                  </div>
+                  <div class="stateitemright">
+                    <div class="statevalue"><span>$ <%= info2.fully_diluted_market_cap %></span></div><span
+                      style="color: #ea3943;padding: 0;border-radius: 8px;display: block;margin-top: 0;font-size: 12px;font-weight: 600;"><i
+                        class="fa fa-caret-up" style="padding-right: 4px;"></i>3.18%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="stateblock">
+                <div class="stateblockinner">
+                  <div class="statelabel"><label class="form-label">Volume</label>
+                    <div class="namepil"><span>24h</span></div>
+                    <div class="infoicon"><i class="fa fa-info-circle"></i></div>
+                  </div>
+                  <div class="stateitemright">
+                    <div class="statevalue"><span>$ <%= info2.volume_24h %></span></div><span
+                      style="color: #ea3943;padding: 0;border-radius: 8px;display: block;margin-top: 0;font-size: 12px;font-weight: 600;"><i
+                        class="<%=info2.class1%>" style="padding-right: 4px;"></i><%= info2.percent_change_24h %>%</span>
+                  </div>
+                </div>
+                <div class="stateblockinner">
+                  <div class="statelabel"><label class="form-label">Volume/Market Cap</label></div>
+                  <div class="stateitemright">
+                    <div class="statevalue"></div><span
+                      style="color: #f9f5f5;padding: 0;border-radius: 8px;display: block;margin-top: 0;font-size: 12px;font-weight: 600;">3.18</span>
+                  </div>
+                </div>
+              </div>
+              <div class="dCjIMS">
+                <div class="cEbjrm statsLabel">Circulating Supply
+                <div class=" bOaopB" aria-expanded="false">
+                  <span class="bi bi-info-circle-fill"></span>
+                </div>
+                <div></div>
+              </div>
+              <div display="flex" class="inUVOz">
+                <div class="statsValue"><%= info2.circulatingsupply %> <%= info.symbol %></div>
+                <div class="supplyBlockPercentage">91%</div>
+              </div><div class="jHGKuI">
+                <span style="width:100%" class="zUDRc">
+                  <span style="width:90.65642857142858%"></span>
+                </span>
+              </div>
+              <div style="margin-top:32px" display="flex" class="sc-16r8icm-0 dwCYJB">
+                <div class="statsLabel">Max Supply<div class="sbsk6s-2 bOaopB" aria-expanded="false">
+                  <span class="bi bi-info-circle-fill"></span>
+                </div>
+              </div>
+              <div class="maxSupplyValue"><%= info2.maxsupply%></div>
+            </div>
+            <div display="flex" class="sc-16r8icm-0 hWTiuI">
+              <div class="statsLabel">Total Supply
+                <div class="sbsk6s-2 bOaopB" aria-expanded="false">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="16" width="16" viewBox="0 0 24 24" color="neutral4" class="sc-16r8icm-0 ehPdqz">
+                    <path d="M12 2C6.48583 2 2 6.48583 2 12C2 17.5142 6.48583 22 12 22C17.5142 22 22 17.5142 22 12C22 6.48583 17.5142 2 12 2ZM14.215 17.2367C13.6642 17.4533 11.755 18.365 10.655 17.3958C10.3267 17.1075 10.1633 16.7417 10.1633 16.2975C10.1633 15.4658 10.4367 14.7408 10.9292 13C11.0158 12.6708 11.1217 12.2442 11.1217 11.9058C11.1217 11.3217 10.9 11.1667 10.2992 11.1667C10.0058 11.1667 9.68083 11.2708 9.38667 11.3808L9.54917 10.715C10.205 10.4483 11.0283 10.1233 11.7333 10.1233C12.7908 10.1233 13.5692 10.6508 13.5692 11.6542C13.5692 11.9433 13.5192 12.45 13.4142 12.8L12.8058 14.9517C12.68 15.3867 12.4525 16.3458 12.805 16.63C13.1517 16.9108 13.9725 16.7617 14.3775 16.5708L14.215 17.2367ZM13.21 8.66667C12.52 8.66667 11.96 8.10667 11.96 7.41667C11.96 6.72667 12.52 6.16667 13.21 6.16667C13.9 6.16667 14.46 6.72667 14.46 7.41667C14.46 8.10667 13.9 8.66667 13.21 8.66667Z"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="maxSupplyValue"><%= info2.totalsupply%></div>
+            </div>
+          </div>
+              <div></div>
+            </div>
+          </div>
+          <div class="linksection hMKivi">
+            <div class="eUVvdh">
+              <ul class="content">
+
+                <li><a class="link-button" href="<%=info.urls.website%>"><i class="fas fa-link" style="padding-right: 6px;"></i><%=info.slug%>.org<i
+                      class="fa fa-external-link iTgjYQ"></i></a>
+                    </li>
+                    <% if(info.urls.explorer.length>0){ %>
+                <li>
+                  <div class="dropdown">
+                  <button class="btn btn-primary link-button" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-search"
+                      style="padding-left: 0px;padding-right: 5px;"></i>Explores<i class="fa fa-angle-down"
+                      style="padding-left: 5px;height: 8px;"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+                      <% for(var i = 0; i < info.urls.explorer.length; i++) {%>
+                      <li><a class="dropdown-item" href="<%=info.urls.explorer[i]%>"><%=info.urls.explorer[i]%></a></li>
+                      <%}%>
+                    </ul>
+                    </div>
+                    </li>
+                    <%}%>
+                    <% if(info.urls.reddit.length>0){ %>
+                      <li>
+                        <div class="dropdown">
+                        <button class="btn btn-primary link-button" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="fa fa-search"
+                            style="padding-left: 0px;padding-right: 5px;"></i>Community<i class="fa fa-angle-down"
+                            style="padding-left: 5px;height: 8px;"></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+                            <% for(var i = 0; i < info.urls.reddit.length; i++) {%>
+                            <li><a class="dropdown-item" href="<%=info.urls.reddit[i]%>">reddit.com</a></li>
+                            <%}%>
+                          </ul>
+                          </div>
+                          </li>
+                          <%}%>
+                          <% if(info.urls.chat.length>0){ %>
+                      <li><a class="link-button" href="<%=info.urls.chat%>"><i class="bi bi-chat-fill" style="padding-right: 6px;"></i>Chat<i
+                        class="fa fa-external-link iTgjYQ"></i></a>
+                      </li>
+                      <%}%>
+                      <% if(info.urls.source_code.length>0){ %>
+                <li><a class="link-button" href="<%=info.urls.source_code%>"><i class="fa fa-code"
+                      style="padding-right: 6px;transform: rotate(-42deg);height: 14px;"></i>Source code<i
+                      class="fa fa-external-link iTgjYQ" style="padding-left: 5px;"></i></a>
+                    </li>
+                    <%}%>
+                    <% if(info.urls.technical_doc.length>0){ %>
+                <li><a class="link-button" href="<%=info.urls.technical_doc%>"><i class="icon ion-ios-paper"
+                      style="padding-right: 6px;"></i>White paper<i class="fa fa-external-link iTgjYQ"
+                      style="padding-left: 5px;"></i></a>
+                      </li> <%}%>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid"> 
+          <div class="btngroup">
+            <div style="margin-top: 10px; margin-bottom: 10px;">
+              <button class="btn  btn-sm">Overview</button>
+            <button class="btn btn-sm">Historicall data</button></div>
+            
+          </div>
+           </div>
+        <div style="display: flex;" class="container-fluid">
+         
+          <div class="chartdiv">
+
+            <div class="group">
+              <div class=" btn-group d-inline-block align-center" id="timeframeButtons">
+              <!--Timeframe radio buttons-->
+              <input type="radio" name="options" value="24h" class="btn-check" id="24h">
+              <label class="btn btn-primary btn-sm" for="24h">24h</label>
+              <input type="radio" name="options" value="7d" class="btn-check" id="7d">
+              <label class="btn btn-primary  btn-sm" for="7d">7d</label>
+              <input type="radio" name="options" value="30d" class="btn-check" id="30d">
+              <label class="btn btn-primary  btn-sm" for="30d">30d</label>
+              <input type="radio" name="options" value="1y" class="btn-check" id="1y">
+              <label class="btn btn-primary  btn-sm" for="1y">1y</label></div>
+            
+              
+          </div>
+          <canvas id="coinchart" width="930" height="500"></canvas>
+       
+        
+        </div>
+        <div class="description">
+        <h4>Description</h4>
+        <div class="descpara">
+          <p><%=info.description%></p>
+        </div>
+
+        </div>
+      </div>
+          <section class="newsletter-subscribe">
+            <div class="container">
+              <div class="intro">
+                <h2 class="text-center">Subscribe for our Newsletter</h2>
+                <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh
+                  erat, pellentesque ut laoreet vitae. </p>
+              </div>
+              <form class="d-flex justify-content-center flex-wrap" method="post">
+                <div class="mb-3"><input class="form-control shadow-lg" type="email" name="email"
+                    placeholder="Your Email"></div>
+                <div class="mb-3"><button class="btn btn-primary" type="submit">Subscribe </button></div>
+              </form>
+            </div>
+          </section>
+        
+      </div>
+    </div>
+  </div>
+<%- include("partials/footer")-%>

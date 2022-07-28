@@ -1,0 +1,30 @@
+<% if(error!=''){ %>
+    <div class="alert alert-danger text-center" >
+        <%= error%>
+      </div>
+<%}%>
+
+<% if(errors.length>0) {%>
+    <% errors.forEach(function(user){%>
+        <div class="alert alert-danger text-center" >
+            <%=user.msg%>
+          </div>
+    
+    <%})%>
+    
+    <%}%>
+
+<% if(successMessage!=''){%>
+    <div class="alert alert-success text-center" >
+        <%=successMessage%>
+      </div>
+<%}%>
+
+<% if(errorMessage!=''){%>
+    <div class="alert alert-success text-center" >
+        <%=errorMessage%>
+      </div>
+<%}%>
+
+
+

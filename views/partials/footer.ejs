@@ -1,0 +1,81 @@
+
+<footer class="shadow-lg footer-dark">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-3 item">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="#">Blockchain</a></li>
+          <li><a href="#">Cryptocurrencies</a></li>
+          <li><a href="#">NFT</a></li>
+          <li><a href="#">Key API</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-6 col-md-3 item">
+        <h3>About Us</h3>
+        <ul>
+          <li><a href="#">Company</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="col-md-6 item text">
+        <h3>CoinInfo</h3>
+        <p></p>
+      </div>
+      <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i
+            class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-github"></i></a></div>
+    </div>
+    <p class="copyright">coininfo 3SI 2022</p>
+  </div>
+</footer>
+
+
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="/js/script.min.js"></script>
+<script>
+  const labels = [
+    '00:00',
+    '02:00',
+    '04:00',
+    '06:00',
+    '08:00',
+    '10:00',
+    '12:00',
+    '14:00',
+    '16:00',
+    '18:00',
+    '20:00',
+    '22:00',
+  ];
+
+  const data = {
+    labels: labels,
+    datasets: [{
+      label: 'My First dataset',
+      // backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [29220, 29200, 29190, 29020, 28900,  28910, 28880, 28500, 27800, 27750, 27250, 27000],
+    }]
+  };
+
+  const config = {
+    type: 'line',
+    data: data,
+    options: {}
+  };
+  $(document).ready(function () {
+    const myChart = new Chart(
+    document.getElementById('coinchart'),
+    config
+  );
+  })
+    // $.post end point backend () 
+
+
+</script>
+
+
+</body>
+
+</html>

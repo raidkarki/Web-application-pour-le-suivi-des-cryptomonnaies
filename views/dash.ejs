@@ -1,0 +1,267 @@
+<%- include("partials/header")-%>
+
+
+  <div class="gridd" >
+   
+    <section >
+    <div class="carousel slide" data-bs-ride="carousel" data-bs-interval="false" id="carousel-1">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col ">
+              <div class="card"><iframe allowfullscreen="" frameborder="0"
+                  src="https://www.youtube.com/embed/hgU-Uybm0_0" width="100%" height="100%"></iframe></div>
+            </div>
+            <div class="col ">
+              <div class="card"><iframe allowfullscreen="" frameborder="0"
+                  src="https://www.youtube.com/embed/bQixYiKBJYA" width="100%" height="100%"></iframe></div>
+            </div>
+            <div class="col ">
+              <div class="card"><iframe allowfullscreen="" frameborder="0"
+                src="https://www.youtube.com/embed/PCIgg8iXIIE" width="100%" height="100%"></iframe></div>
+            </div>
+           
+            <div class="col ">
+              <div class="card">
+                <iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/YF-sDEHMWQM" width="100%" height="100%"></iframe></div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row row-cols-xl-4">
+            <div class="col ">
+              <div class="card"><iframe allowfullscreen="" frameborder="0"
+                  src="https://www.youtube.com/embed/ROtD8UqObcI" width="100%" height="100%"></iframe></div>
+            </div>
+            <div class="col ">
+              <div class="card"><iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/UMGVlObZv1c" width="100%" height="100%"></iframe></div>
+            </div>
+            <div class="col">
+              <div class="card"><iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/tTXGGT8R9Jk"  width="100%" height="100%"></iframe></div>
+            </div>
+            <div class="col">
+              <div class="card"><iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/evZmKpJxraw"  width="100%" height="100%"></iframe></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div><a class="carousel-control-prev indicators1" href="#carousel-1" role="button" data-bs-slide="prev"><span
+            class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a
+          class="carousel-control-next indicators" href="#carousel-1" role="button" data-bs-slide="next"
+          style="opacity: 0.19;"><span class="carousel-control-next-icon"></span><span
+            class="visually-hidden">Next</span></a></div>
+    </div>
+  </section>
+  <div>
+    <section class="trendingsection">
+      <div class="gRdZsE">
+        <h4><br><strong>Today's Cryptocurrency Prices by Coin info</strong><br><br></h4>
+        <p><br>&nbsp; &nbsp;The global crypto market cap is<br><br></p>
+      </div>
+      <div class="container-fluid" style="align-items: center;">
+        <div class="row trendingrow row-cols-md-3 row-cols-sm-1" style="width: 100%;margin: auto;">
+          <div class="col">
+            <div class="trendingcol">
+              <h5 class="fs-5"><i class="fab fa-gripfire" style="color: var(--bs-yellow);"></i>Trending<a
+                  class="float-end" href="/dash/trending-cryptocurrencies" style="--bs-primary: #1c3e70;--bs-primary-rgb: 28,62,112;">more&gt;</a>
+              </h5>
+      <% for (var i = 0; i <=2; i++) { %> 
+
+              <div class="coinrow" style="padding: 0px;padding-right: 10px;"> 
+                        
+                <span class="rank"><%= coin1[i].rank %> </span>
+                <div class="nameandlogo">
+                  <img class="coinlogo" src="<%= coin1[i].imgsrc %>">
+                  <a href="/coin/<%=coin1[i].name %>">
+                    <span class="coinname"><%= coin1[i].name %></span>
+                  </a>
+                 
+                </div> 
+                <span class="coinsymbol"><%= coin1[i].sym %></span>
+                <div class="coinvalue">
+                  <span><%= coin1[i].pricechange %></span>
+                </div> 
+                           
+              </div>
+          
+  <% } %>
+              
+            </div>
+          </div>
+          <div class="col">
+            <div class="trendingcol  biggestgain">
+              <h5 class="fs-5"><i class="fas fa-chart-line" style="color: var(--bs-teal);"></i>&nbsp;Biggest gainers<a
+                  class="float-end" href="/dash/gains&losers">more&gt;</a></h5>
+                  <% for (var i = 3; i <=5; i++) { %> 
+                    <div class="coinrow" style="padding: 0px;padding-right: 10px;"> 
+                              
+                      <span class="rank"><%= coin1[i].rank %> </span>
+                      <div class="nameandlogo"><img class="coinlogo" src="<%= coin1[i].imgsrc %>">
+                        <a href="/coin/<%=coin1[i].name %>">
+                          <span class="coinname"><%= coin1[i].name %></span>
+                        </a>
+                        </div><span class="coinsymbol"><%= coin1[i].sym %></span>
+                      <div class="coinvalue">
+                        <span> <i class="fas fa-caret-up "></i><span><%= coin1[i].pricechange %></span></span>
+                      </div> 
+                                 
+                    </div>
+        <% } %>
+              
+            </div>
+          </div>
+          <div class="col">
+            <div class="trendingcol">
+              <h5 class="fs-5"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"
+                  fill="none" style="color: var(--bs-blue);">
+                  <path
+                    d="M13 5.07089C16.3923 5.55612 19 8.47353 19 12C19 15.866 15.866 19 12 19C8.13401 19 5 15.866 5 12C5 9.96159 5.87128 8.12669 7.26175 6.84738L5.84658 5.43221C4.09461 7.0743 3 9.40932 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C11.662 3 11.3283 3.01863 11 3.05493V9.08551H13V5.07089Z"
+                    fill="currentColor"></path>
+                  <path
+                    d="M7.70711 8.70708C7.31658 9.0976 7.31658 9.73077 7.70711 10.1213L10.5355 12.9497C10.9261 13.3402 11.5592 13.3402 11.9497 12.9497C12.3403 12.5592 12.3403 11.926 11.9497 11.5355L9.12132 8.70708C8.7308 8.31655 8.09763 8.31655 7.70711 8.70708Z"
+                    fill="currentColor"></path>
+                </svg>Recently added<a class="float-end" href="/dash/new">more&gt;</a></h5>
+                <% for (var i = 6; i <=8; i++) { %> 
+                  <div class="coinrow" style="padding: 0px;padding-right: 10px;"> 
+                            
+                    <span class="rank"><%= coin1[i].rank %> </span>
+                    <div class="nameandlogo"><img class="coinlogo" src="<%= coin1[i].imgsrc %>">
+                      <a href="/coin/<%=coin1[i].name %>">
+                        <span class="coinname"><%= coin1[i].name %></span>
+                      </a>
+                      </div><span class="coinsymbol"><%= coin1[i].sym %></span>
+                    <div class="coinvalue">
+                      <span><span><%= coin1[i].pricechange %></span></span>
+                    </div> 
+                               
+                  </div>
+      <% } %>
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="allbuttons">
+        <div class="wat.por.div" style="width: 225px;"><a href="#" style="margin-right: 0px;"><button
+              class="btn btn-primary buttons" type="button"><span><i class="far fa-star"
+                  style="color: var(--bs-gray-500);"></i></span><span
+                style="margin-left: 3px;">Watchlist</span></button></a><a href="#" style="margin-right: 0px;"><button
+              class="btn btn-primary buttons" type="button"><span><i class="fas fa-chart-pie"
+                  style="color: var(--bs-gray-500);"></i></span><span
+                style="margin-left: 5px;">Portfolio</span></button></a>
+          <div class="line" style="margin-top: 9px;margin-right: 11px;margin-left: 5px;"></div>
+        </div><a href="/"><button class="btn btn-primary buttons1" type="button">Cryptocurrency</button></a><a
+          href="#"><button class="btn btn-primary buttons1" type="button">categories</button></a><a href="#"><button
+            class="btn btn-primary buttons1" type="button">NFT</button></a><a href="#"><button
+            class="btn btn-primary buttons1" type="button">BNB chain</button></a>
+      </div>
+      <div>
+        <div id="tablesection" class="table-responsive" >
+          <table class="table czTsgW  table-hover">
+            <thead style="border-top-style: solid;border-top-color: #363b43;border-right-style: none;border-bottom-style: solid;border-bottom-color: #363b43;border-left-style: none;color: #ffffff;font-style: normal;font-weight: 500;height: 50px;">
+              
+              <tr>
+                <th scope="col" ></th>
+                <th scope="col" ><i class="fas fa-hashtag"></i><i class="fas fa-caret-down"></i></th>
+                <th scope="col" style="text-align:left">Name</th>
+                <th scope="col" >Price</th>
+                <th  scope="col" style="text-align:right">24h</th>
+                <th scope="col" style="text-align:right">7d</th>
+                <th scope="col" style="text-align:right">MarketCap</th>
+                <th scope="col" style="text-align:right">Volume</th>
+                <th scope="col" style="text-align:right">Supply</th>
+                <th scope="col" style="text-align:right">Last 7 days</th>
+                
+              </tr>
+            </thead>
+            
+            <tbody>
+              <% for (var i = 0; i <10; i++) { %> 
+              <tr>
+                   <th scope="row"></th>
+                  <td style="text-align: left;"><p class="rankoftable"><%= coin2[i].rank %></p></td>
+                  <td style="text-align: left;">
+                    <div display="flex" class=" escjiH">
+                    <a href="/coin/<%= coin2[i].name %>" class="cmc-link">
+                      <div class=" coincar">
+                        <img class="coin-logo" src="<%= coin2[i].imgsrc %>" loading="lazy" alt="BTC logo">
+                        <div class=" namecoin">
+                          <p font-weight="semibold" color="text" font-size="1" class="name"><%= coin2[i].name %></p>
+                          <div data-nosnippet="true" class="fZIJcI">
+                            <div class=" iNybpU"><%= coin2[i].rank %></div>
+                            <p color="text3" class="sc-1eb5slv-0 nhjPq coin-item-symbol" font-size="1"><%= coin2[i].sym %></p>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  
+                </div>
+              </td>
+                  <td style="text-align: center;" >
+                    <div class=" cLgOOr">
+                      <a href="/coin/<%= coin2[i].name %>" class="cmc-link">
+                        <span><%= coin2[i].price %></span>
+                      </a>
+                    </div>
+                  </td>
+                  <td style="text-align: right ;">
+                   <a href="/coin/<%= coin2[i].name %>"><span class=" kAXKAX"><span class="fas fa-caret-up"></span><%= coin2[i].h %></span></a> 
+                  </td>
+                  <td style="text-align: right ;">
+                    <span class="hzgCfk"><span class="fas fa-caret-down"></span><%= coin2[i].d %></span></td>
+                  <td style="text-align: right ;">
+                    <p color="text" style="white-space:nowrap" font-size="1" class=" bRswdu">
+                      
+                      <span data-nosnippet="true" class="ieFnWP font_weight_500"><%= coin2[i].marketcap %></span>
+                    </p>
+                  </td>
+                  <td style="text-align: right ;">
+                    <div class="sc-16r8icm-0 j3nwcd-0 cRcnjD">
+                      <a href="/currencies/bitcoin/markets/" class="cmc-link">
+                        <p font-size="1" class="sc-1eb5slv-0 bRswdu font_weight_500" color="text"><%= coin2[i].volume %></p>
+                      </a>
+                      <div data-nosnippet="true">
+                        <p color="text2" font-size="0" class="sc-1eb5slv-0 ejtSnS"><%= coin2[i].Volume %></p>
+                      </div>
+                    </div>
+                  </td>
+                  <td style="text-align: right ;">
+                    <div style="cursor:pointer" class="sc-16r8icm-0 g5oqcc-0 drLITg">
+                      <div class="sc-16r8icm-0 g5oqcc-1 eGQXzN">
+                        <p font-size="1" font-weight="medium" color="text" class="sc-1eb5slv-0 cTtqsY">
+                          <%= coin2[i].circulatungsupply %></p>
+                        </div>
+                        </div>
+                      </div>
+                    </td>
+                  <td style="text-align: right ;">
+                    <a href="/coin" class="cmc-link">
+                      <img src="<%= coin2[i].last7days %>" alt="bitcoin-7d-price-graph" class="h7vnx2-0 bCltOL" loading="lazy">
+                    </a></td>
+              </tr>
+              <% } %>
+              
+          </tbody>
+          </table>
+        </div>
+        <section class="newsletter-subscribe">
+            <div class="container">
+              <div class="intro">
+                <h2 class="text-center">Subscribe for our Newsletter</h2>
+                <p class="text-center">Subscribe in our Newsletter to stay on touch with your crypto. </p>
+              </div>
+              <form class="d-flex justify-content-center flex-wrap" method="post">
+                <div class="mb-3"><input class="form-control shadow-lg" type="email" name="email"
+                    placeholder="Your Email"></div>
+                <div class="mb-3"><button class="btn btn-primary" type="submit">Subscribe </button></div>
+              </form>
+            </div>
+          </section>
+      </div>
+    </section>
+  </div></div>
+  
+<%- include("partials/footer")-%>
